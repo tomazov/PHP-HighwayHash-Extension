@@ -1,0 +1,12 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("highwayhash", "for highwayhash support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("highwayhash", "enable highwayhash support", "no");
+
+if (PHP_HIGHWAYHASH != "no") {
+	EXTENSION("highwayhash", "highwayhash.c");
+}
