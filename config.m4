@@ -6,5 +6,5 @@ PHP_ARG_ENABLE(highwayhash,
     [  --enable-highwayhash           Enable HighwayHash support])
 
 if test "$PHP_HIGHWAYHASH" != "no"; then
-  PHP_NEW_EXTENSION(highwayhash, highwayhash-impl.c highwayhash.c, $ext_shared)
+  PHP_NEW_EXTENSION(highwayhash, highwayhash-impl.c php_highwayhash.c, $ext_shared)
 fi

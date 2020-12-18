@@ -8,6 +8,12 @@
 #include "php_highwayhash.h"
 #include "highwayhash-impl.h"
 
+#include "highwayhash.c"
+
+#ifdef COMPILE_DL_HIGHWAYHASH
+ZEND_GET_MODULE(highwayhash)
+#endif
+
 #ifndef WORDS_BIGENDIAN
 # include <arpa/inet.h>
 #endif
@@ -54,10 +60,6 @@ zend_module_entry highwayhash_module_entry = {
     STANDARD_MODULE_PROPERTIES
 };
 /* }}} */
-
-#ifdef COMPILE_DL_SIPHASH
-ZEND_GET_MODULE(highwayhash)
-#endif
 
 /* {{{ PHP_MINIT_FUNCTION
  */
